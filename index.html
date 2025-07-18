@@ -7,6 +7,11 @@
     body {
       font-family: Arial, sans-serif;
       margin: 40px;
+      text-align: center; /* Center text content */
+    }
+    #controls {
+      display: inline-block; /* Center the controls horizontally */
+      text-align: left; /* Align controls inside the container */
     }
     input, select, button {
       margin: 10px 0;
@@ -18,22 +23,41 @@
       font-weight: bold;
       margin-top: 20px;
     }
+    #banner {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    #calculator-image {
+      display: block;
+      margin: 20px auto;
+      width: 150px;
+    }
   </style>
 </head>
 <body>
+  <div id="banner">Welcome to the Math Calculator</div>
+  
+  <img id="calculator-image" src="calculator.png" alt="Calculator Image" />
+
   <h2>Simple Math Calculator</h2>
   
-  <input type="text" id="num1" placeholder="Enter first number" />
-  <input type="text" id="num2" placeholder="Enter second number" />
-  
-  <select id="operator">
-    <option value="+">Addition (+)</option>
-    <option value="-">Subtraction (-)</option>
-    <option value="*">Multiplication (*)</option>
-    <option value="/">Division (/)</option>
-  </select>
-  
-  <button onclick="calculate()">Calculate</button>
+  <div id="controls">
+    <input type="text" id="num1" placeholder="Enter first number" />
+    <input type="text" id="num2" placeholder="Enter second number" />
+    
+    <select id="operator">
+      <option value="+">Addition (+)</option>
+      <option value="-">Subtraction (-)</option>
+      <option value="*">Multiplication (*)</option>
+      <option value="/">Division (/)</option>
+    </select>
+    
+    <button onclick="calculate()">Calculate</button>
+  </div>
   
   <div id="result"></div>
 
